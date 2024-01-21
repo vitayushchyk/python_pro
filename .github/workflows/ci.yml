@@ -1,0 +1,21 @@
+name: Check code quality
+
+on:
+  - pull_request
+
+jobs:
+  code-qality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install poetry
+        run: pip install poetry && poetry install
+      - name: Run fomatters
+        run: poetry run black --check . && poetry run isort --check .
+      - name: Run linter
+        run: poetry run ruff .
+      - name: Run static type checker
+        run: poetry run mypy .

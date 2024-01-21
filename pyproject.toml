@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-pro"
+version = "0.1.0"
+description = ""
+authors = ["vitayushchyk <vitay2715@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+ruff = "^0.1.14"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
