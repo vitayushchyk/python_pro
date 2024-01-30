@@ -40,8 +40,8 @@ def dedup(collection) -> Generator[str, None, None]:
 
 
 print("___________")
-for player in dedup(team):
-    print(player)
+for player_names in dedup(team):
+    print(player_names)
 
 # Expected Output:
 # John Smith
