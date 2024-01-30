@@ -85,7 +85,7 @@ exclude = ["migrations"]
 # Silint "type import errors" as our 3rd-party libs does not have types
 # Check: https://mypy.readthedocs.io/en/latest/config_file.html#import-discovery
 follow_imports = 'silent'
-
+line-length = 120
 [[tool.mypy.overrides]]
 module = []
 ignore_missing_imports = true
