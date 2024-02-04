@@ -8,7 +8,7 @@ from typing import Optional
 team: dict[int, dict] = {
     1: {"name": "John", "age": 20, "number": 1},
     3: {"name": "Mark", "age": 33, "number": 3},
-    12: {"name": "Cavin", "age": 31, "number": 12}
+    12: {"name": "Cavin", "age": 31, "number": 12},
 }
 
 
@@ -33,11 +33,11 @@ def player_delete(number: int) -> None:
 
 
 def save_to_csv_file() -> None:
-    with open('players.csv', "w", newline="") as file:
+    with open("players.csv", "w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["name", "age", "number"])
         for players in team.values():
-            writer.writerow([players['name'], players['age'], players['number']])
+            writer.writerow([players["name"], players["age"], players["number"]])
 
 
 def main():
