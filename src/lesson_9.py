@@ -23,7 +23,8 @@ class Price:
 
     def __sub__(self, other: "Price") -> "Price":
         return Price(
-            value=(self.normalized - other.normalized) / self._CURRENCIES[self.currency], currency=self.currency
+            value=(self.normalized - other.normalized) / self._CURRENCIES[self.currency],
+            currency=self.currency,
         )
 
     def __str__(self):
@@ -36,13 +37,14 @@ class Price:
 
 
 flight = Price(value=200, currency="USD")
-hotel = Price(value=1000, currency="UAH")
+hotel = Price(value=1000, currency="EUR")
 
-relax = Price(value=1000, currency="UAH")
-food = Price(value=200, currency="USD")
+relax = Price(value=5000, currency="UAH")
+food = Price(value=20, currency="USD")
 
 total: Price = flight + hotel
 total_1: Price = relax - food
 # total.currency == USD
+# total.currency == UAH
 print(round(total))
 print(round(total_1))
