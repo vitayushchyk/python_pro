@@ -49,7 +49,6 @@ channel_list = [
 post_list = [
     Post(message='Hello, everybody', timestamp=datetime.now() - timedelta(days=1)),
     Post(message='Bye, everybody', timestamp=datetime.now() + timedelta(days=1)),
-
 ]
 
 process_schedule(post_list, channel_list)
