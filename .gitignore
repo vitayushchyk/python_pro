@@ -161,6 +161,7 @@ cython_debug/
 notes
 .DS_Store
 rockyou.txt
-./src/players.csv
-./src/logs.json
-./src/image.jpg
+src/players.csv
+src/logs.json
+src/image.jpg
+src/config_alfavantage.py
